@@ -1,1 +1,1 @@
-dotnet run --project ./Resin-Calc/Resin-Calc.csproj &
+dotnet run --project ./Resin-Calc.csproj &
