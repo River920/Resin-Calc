@@ -2,12 +2,29 @@
 <html lang="en">
 <body>
 
+    <style>
+        button {
+        margin-bottom: 5px;
+        margin-top: 5px
+        }
+    </style>
+
     <h3>Resin Calculator</h3>
     <h3>Calculate your resin. AU$/KG</h3>
     <p id="out"></p>
+    
+    
+    <div>
+        <p>Resin store options:<br>1 - Solid Solutions Art Resin Epoxy - 1st highest rated - a$79.00<br>
+            2 - Barnes Epoxyglass Clear Coating Epoxy - 2nd highest rated - a$121.00<br>
+        3 - Riot Art & Craft Urban Crafter Casting Resin - 1st cheapest - a$54.99<br>
+    4 - Clear Epoxy Resin Lovfen Hardener B - 2nd cheapest - a$48.87</p>
+    </div>
 
-
-    <button onclick="calcFunction()">Calculate</button>
+    <div>
+        <button class="button" onclick="calcFunction()">Calculate</button>
+    </div>
+    
     <script>
         function calcFunction() {
             let amt = prompt("Please enter amount of resin(Kgs):", "0");
@@ -21,13 +38,7 @@
 
     </script>
     
-    <!-- <input type="number" id="kgs" name="kilograms"></input>
-    <script>
-        var kgscalc = document.getElementById("kgs").value;
-        var kgscalcx = kgscalc * 2;
-        alert(kgscalcx)
-    </script> -->
-    
+    <p><a href="/show-tutorial">To tutorial</a><br><a href="/">To directory</a></p>
 
 </body>
 </html>
