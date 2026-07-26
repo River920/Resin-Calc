@@ -10,15 +10,15 @@
     </style>
 
     <h3>Resin Calculator</h3>
-    <h3>Calculate your resin. AU$/KG</h3>
+    <h3>Calculate your resin. AU$/Liter</h3>
     <p id="out"></p>
     
     
     <div>
-        <p>Resin store options:<br>1 || Solid Solutions Art Resin Epoxy - 1st highest rated - a$79.00<br>
-            2 || Barnes Epoxyglass Clear Coating Epoxy - 2nd highest rated - a$121.00<br>
-        4 || Clear Epoxy Resin Lovfen Hardener B - 1st cheapest - a$48.87<br>
-    3 || Riot Art & Craft Urban Crafter Casting Resin - 2nd cheapest - a$54.99</p>
+<p>Resin store options:<br>1 || Solid Solutions Art Resin Epoxy ----------------- 1st highest rated     -- $39.5/L<br>
+                           2 || Barnes Epoxyglass Clear Coating Epoxy     ------- 2nd highest rated      - $71.50/L<br>
+                           3 || Urban Crafter Epoxy Resin Kit 1:1 1Lt   --------- 1st cheapest     ------- $20.00/L<br>
+                           4 || 1:1 Ratio Clear Epoxy Casting Coating Resin     - 2nd cheapest      ------ $34.99/L</p>
     </div>
 
     <div>
@@ -28,19 +28,19 @@
     <script>
         function calcFunction() {
             let store_pref = prompt("Please enter store preference number: ", "Option 1-4");
-            let amt = prompt("Please enter amount of resin(Kgs): ", "0");
+            let amt = prompt("Please enter amount of resin(L): ", "0");
             let multiplier;
             let err_code;
             err_code = 0;
 
             if (store_pref == 1) {
-                multiplier = 79
+                multiplier = 39.5
             } else if (store_pref == 2) {
-                multiplier = 121
+                multiplier = 71.5
             } else if (store_pref == 3) {
-                multiplier = 48.87
+                multiplier = 20
             } else if (store_pref == 4) {
-                multiplier = 54.99
+                multiplier = 34.99
             } else {
                 err_code = 1;
             };
@@ -50,7 +50,7 @@
 
 
 
-            document.getElementById("out").innerHTML = "Output(aud$): " + aud;
+            document.getElementById("out").innerHTML = "Output $: " + aud;
 
             if (isNaN(amt)) {
                 err_code = 1;
