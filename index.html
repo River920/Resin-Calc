@@ -15,10 +15,10 @@
     
     
     <div>
-        <p>Resin store options:<br>1 - Solid Solutions Art Resin Epoxy - 1st highest rated - a$79.00<br>
-            2 - Barnes Epoxyglass Clear Coating Epoxy - 2nd highest rated - a$121.00<br>
-        3 - Riot Art & Craft Urban Crafter Casting Resin - 1st cheapest - a$54.99<br>
-    4 - Clear Epoxy Resin Lovfen Hardener B - 2nd cheapest - a$48.87</p>
+        <p>Resin store options:<br>1 || Solid Solutions Art Resin Epoxy - 1st highest rated - a$79.00<br>
+            2 || Barnes Epoxyglass Clear Coating Epoxy - 2nd highest rated - a$121.00<br>
+        4 || Clear Epoxy Resin Lovfen Hardener B - 1st cheapest - a$48.87<br>
+    3 || Riot Art & Craft Urban Crafter Casting Resin - 2nd cheapest - a$54.99</p>
     </div>
 
     <div>
@@ -27,11 +27,42 @@
     
     <script>
         function calcFunction() {
-            let amt = prompt("Please enter amount of resin(Kgs):", "0");
-            let aud = amt*2
+            let store_pref = prompt("Please enter store preference number: ", "Option 1-4");
+            let amt = prompt("Please enter amount of resin(Kgs): ", "0");
+            let multiplier;
+            let err_code;
+            err_code = 0;
+
+            if (store_pref == 1) {
+                multiplier = 79
+            } else if (store_pref == 2) {
+                multiplier = 121
+            } else if (store_pref == 3) {
+                multiplier = 48.87
+            } else if (store_pref == 4) {
+                multiplier = 54.99
+            } else {
+                err_code = 1;
+            };
+            
+
+            let aud = amt*multiplier;
+
 
 
             document.getElementById("out").innerHTML = "Output(aud$): " + aud;
+
+            if (isNaN(amt)) {
+                err_code = 1;
+            } else {
+
+            }
+
+            if (err_code == 1) {
+                document.getElementById("out").innerHTML = "Invalid Store or Amount, if you are a beginner refer to the tutorial linked at the bottom of the page."
+            } else {
+
+            };
 
         }
         
