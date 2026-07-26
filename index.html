@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body>
-        <div>
-            <h3>Resin Calculator</h3>
-            <h3>Calculate your resin. AU$/KG</h3>
-        </div>
-        <div>
-            <form>
-                <input type="number" id="kgs" name="kilograms"></input>
-            </form>
-            <script>
-                var kgscalc = document.getElementById("kgs").value;
-                var kgscalcx = kgscalc * 2;
-            </script>
-            <div>
-                <button onclick="alert(kgscalcx) ">Calculate</button>
-            </div>
-        </div>
-    </body>
+<body>
+
+    <h3>Resin Calculator</h3>
+    <h3>Calculate your resin. AU$/KG</h3>
+    <p id="out"></p>
+
+
+    <button onclick="calcFunction()">Calculate</button>
+    <script>
+        function calcFunction() {
+            let amt = prompt("Please enter amount of resin(Kgs):", "0");
+            let aud = amt*2
+
+
+            document.getElementById("out").innerHTML = "Output(aud$): " + aud;
+
+        }
+        
+
+    </script>
+    
+    <!-- <input type="number" id="kgs" name="kilograms"></input>
+    <script>
+        var kgscalc = document.getElementById("kgs").value;
+        var kgscalcx = kgscalc * 2;
+        alert(kgscalcx)
+    </script> -->
+    
+
+</body>
 </html>
